@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata</title>
+    <style>
+   
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #03394e; 
+            color: #ffffff;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #ffffff;
+        }
+
+        .biodata-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #0569ab; 
+            border: 6px solid #03394e; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .biodata-section {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #03394e;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .biodata-section h2 {
+            margin-top: 0;
+            color: #0569ab;
+        }
+
+        .biodata-details {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .profile-picture {
+            max-width: 150px;
+            margin: 15px auto;
+            display: block;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #03182e;
+        }
+
+        .nav-container a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container a:hover {
+            background-color: #ffffff;
+            color: #03394e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #03182e;
+            color: #ffffff;
+            margin-top: 20px;
+            border-radius: 0 0 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="nav-container">
+            <img src="donalduck.png" alt="Donald Duck Sticker" class="sticker" style="width: 90px; height: 90px;"> 
+            <a href="index.html" class="home-button" 
+               style="background-color: #FF6347; color: white; padding: 10px 20px; text-decoration: none; font-size: 18px; font-weight: bold; border-radius: 5px; transition: background-color 0.3s;" 
+               onmouseover="this.style.backgroundColor='#FF4500'" onmouseout="this.style.backgroundColor='#FF6347'">Home</a>
+    </nav>
+
+    <div class="biodata-container">
+        <h1>Biodata</h1>
+        <img src="shidah_biodata.png" alt="Profile Picture" class="profile-picture">
+        
+        <div class="biodata-section">
+            <h2>Personal Information</h2>
+            <div class="biodata-details">
+                <p><strong>Name:</strong> Nur Shahidah Binti Abdul Halim</p>
+                <p><strong>Date of Birth:</strong> 5 July 2024</p>
+                <p><strong>Gender:</strong> Female</p>
+                <p><strong>Nationality:</strong> Malaysian</p>
+                <p><strong>Contact:</strong> nurshahidah9669@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="biodata-section">
+            <h2>Hobbies</h2>
+            <div class="biodata-details">
+                <p>1. Food Hunting</p>
+                <p>2. Sleep</p>
+                <p>3. Watched Tiktok</p>
+                <p>4. Play Online Game</p>
+            </div>
+        </div>
+
+        <div class="biodata-section">
+            <h2>Skills</h2>
+            <div class="biodata-details">
+                <p>- Communication</p>
+                <p>- Leadership</p>
+                <p>- Problem Solving</p>
+                <p>- Web Development</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nur Shahidah Abdul Halim | All rights reserved</p>
+    </footer>
+</body>
+</html>

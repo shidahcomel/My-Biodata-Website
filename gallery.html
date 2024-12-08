@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #03394e; 
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #ffffff;
+        }
+
+        .carousel-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 900px;
+            max-height: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #0569ab;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .carousel-slide {
+            display: none;
+            text-align: center;
+        }
+
+        .carousel-slide.active {
+            display: block;
+        }
+
+        .carousel-slide img {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-slide p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+
+        .carousel-controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .arrow {
+            background-color: #03182e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .arrow:hover {
+            background-color: #03182e;
+        }
+
+
+        @media (max-width: 768px) {
+            .carousel-slide img {
+                max-height: 250px;
+            }
+
+            .arrow {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-slide p {
+                font-size: 14px;
+            }
+
+            .arrow {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+        </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <img src="donalduck.png" alt="Donald Duck Sticker" class="sticker" style="width: 90px; height: 90px;"> 
+            <a href="index.html" class="home-button" 
+               style="background-color: #FF6347; color: white; padding: 10px 20px; text-decoration: none; font-size: 18px; font-weight: bold; border-radius: 5px; transition: background-color 0.3s;" 
+               onmouseover="this.style.backgroundColor='#FF4500'" onmouseout="this.style.backgroundColor='#FF6347'">Home</a>
+        </div>
+    </nav>
+    </body>
+<body>
+    <div class="container">
+        <h1>Gallery</h1>
+    <div class="carousel-container">
+         
+        <div class="carousel-slide active">
+            <img src="galleryistmw.png" alt="Slide 1" width="250" height="300">
+        </div>
+        <div class="carousel-slide">
+            <img src="gallery1.png" alt="Slide 2" width="250" height="300">
+        </div>
+        <div class="carousel-slide">
+            <img src="gallery2.png" alt="Slide 3" width="250" height="300">
+        </div>
+        <div class="carousel-slide">
+            <img src="gallery3.png" alt="Slide 4" width="250" height="300">
+        </div>
+        <div class="carousel-slide">
+            <img src="gallery4.png" alt="Slide 5" width="250" height="300">
+        </div>
+        <div class="carousel-slide">
+            <img src="gallery5.png" alt="Slide 6" width="250" height="300">
+        </div>
+        <div class="carousel-slide">
+            <img src="gallery6.png" alt="Slide 7" width="250" height="300">
+        </div>
+        <div class="carousel-slide">
+            <img src="gallery7.png" alt="Slide 8" width="250" height="300">
+        </div>
+        <div class="carousel-slide">
+            <img src="gallery8.png" alt="Slide 9" width="250" height="300">
+        </div>
+        <div class="carousel-slide">
+            <img src="gallery10.png" alt="Slide 10" width="250" height="300">
+        </div>
+        <div class="carousel-slide">
+            <img src="gallery11.png" alt="Slide 11" width="250" height="300">
+        </div>
+        <div class="carousel-slide">
+            <img src="gallery12.png" alt="Slide 12" width="250" height="300">
+        </div>
+        
+        <div class="carousel-controls">
+            <button class="arrow" id="prev">← Previous</button>
+            <button class="arrow" id="next">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.carousel-slide');
+        let currentSlide = 0;
+
+        const showSlide = (index) => {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        };
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>

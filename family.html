@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Family</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #03394e, #0569ab);
+            color: #ffffff;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 36px;
+            color: #ffffff;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #ffffff;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #e3e3e3;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card-container:last-child {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .card {
+            background-color: #ffffff;
+            color: #03394e;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 4px solid #0569ab;
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+            color: #0569ab;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .divider {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .divider::before, .divider::after {
+            content: '';
+            display: inline-block;
+            width: 40px;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 0 10px;
+        }
+
+        .divider span {
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .family-photo {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .family-photo img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            border: 4px solid #ffffff;
+        }
+
+        nav {
+            background-color: #03182e;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ffffff;
+            color: #03394e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #03182e;
+            color: #ffffff;
+            margin-top: 30px;
+            border-radius: 0 0 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="nav-container">
+            <img src="donalduck.png" alt="Donald Duck Sticker" class="sticker" style="width: 90px; height: 90px;"> 
+            <a href="index.html" class="home-button" 
+               style="background-color: #FF6347; color: white; padding: 10px 20px; text-decoration: none; font-size: 18px; font-weight: bold; border-radius: 5px; transition: background-color 0.3s;" 
+               onmouseover="this.style.backgroundColor='#FF4500'" onmouseout="this.style.backgroundColor='#FF6347'">Home</a>
+    </nav>
+    
+    <div class="container">
+        <h1>My Family</h1>
+        <div class="intro">
+            <p>Welcome to my family page! Meet the amazing individuals who make up my world. Their love, support, and unique personalities have shaped who I am today.</p>
+        </div>
+
+        <div class="divider"><span>Meet My Family</span></div>
+
+        <div class="card-container">
+            <div class="card">
+                <img src="family_ayah.png" alt="Father">
+                <h2>Father</h2>
+                <p>The backbone of our family, always providing wisdom and strength.</p>
+            </div>
+
+            <div class="card">
+                <img src="family_mama.png" alt="Mother">
+                <h2>Mother</h2>
+                <p>The heart of our family, full of love, care, and boundless energy.</p>
+            </div>
+
+            <div class="card">
+                <img src="family_abang.png" alt="Eldest Brother">
+                <h2>Eldest Brother</h2>
+                <p>A source of inspiration with his dedication and leadership.</p>
+            </div>
+
+            <div class="card">
+                <img src="family_kakak1.png" alt="Elder Sister">
+                <h2>Elder Sister</h2>
+                <p>Her kindness and perseverance make her a role model for all of us.</p>
+            </div>
+
+            <div class="card">
+                <img src="family_kakak2.png" alt="Younger Sister">
+                <h2>Younger Sister</h2>
+                <p>Her creativity and energy bring joy and life to our family.</p>
+            </div>
+        </div>
+
+        <div class="divider"><span>Our Happy Moments</span></div>
+
+        <div class="family-photo">
+            <img src="family_all.png" alt="Family Photo">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Family Page | Designed with Love and Creativity</p>
+    </footer>
+</body>
+</html>
+
+
